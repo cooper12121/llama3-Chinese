@@ -128,9 +128,10 @@
   causal_mask = torch.triu(causal_mask, diagonal=1)
   causal_mask = causal_mask.to('cuda', dtype=torch.bfloat16)#
   ```
-* 方法2：在modeling_llama.py line 1094行前添加：
-  ```self.register_buffer("triu0",torch.ones(sequence_length, target_length).to("cuda").triu())```
-  将line 1095 ```causal_mask = torch.triu(causal_mask, diagonal=1)```  修改为：```causal_mask=causal_mask*self.triu0```
+* 方法2：在modeling_llama.py line 1094行前添加：  
+  ```self.register_buffer("triu0",torch.ones(sequence_length, target_length).to("cuda").triu())```  
+  将line 1095 ```causal_mask = torch.triu(causal_mask, diagonal=1)```  
+  修改为：```causal_mask=causal_mask*self.triu0```
 * 方法3：在加载模型前的代码中添加
   ```torch.set_default_tensor_type(torch.cuda.HalfTensor)```
   但这种方式可能引起cuda内核的pin_memory错误，可行与否与具体的环境有关
