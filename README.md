@@ -6,7 +6,7 @@
 
 <p align="center">
     <br>
-    <img src="./llama3.jpg" width="800"/>
+    <img src="./figures/llama3.jpg" width="800"/>
     <br>
 </p>
 <!-- <p align="center">
@@ -30,7 +30,7 @@
 
 ## 新闻
 
-**[2024/04/26] 发布300万条语料训练的checkpoint及基准测试结果，200G训练还未完成，持续更新中**
+**[2024/04/26] 发布20G（300万条）语料训练的checkpoint及基准测试结果，200G训练还未完成，持续更新中**
 
 **[2024/04/19] 🚀 创建仓库，正式开始预训练**
 
