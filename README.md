@@ -1,5 +1,5 @@
 # llama3-Chinese
-* 对llama3进行中文全参预训练，区别于其他使用lora预训练的项目。预计一星期后发布。
+* 对llama3进行中文全参预训练，区别于其他使用lora预训练的项目。
 * 基于wudao200G中文语料进行,后续再扩展到其他语料
   
 [**🇨🇳中文**](./README.md) | [**🌐English**](./README_EN.md) 
@@ -22,7 +22,7 @@
 
 #### 本项目主要内容
 
-- 🚀 开源中文llama3基础模型，该模型在[llama3-8B-base模型](https://huggingface.co/meta-llama/Meta-Llama-3-8B)的基础上进行了中文增量全参预训练（放开所有参数，并不只是针对embedding和l-head层）
+- 🚀 开源中文llama3基础模型，该模型在[llama3-8B-base模型](https://huggingface.co/meta-llama/Meta-Llama-3-8B)的基础上进行了中文增量全参预训练（放开所有参数，并不只是针对embedding和lm-head层）
 - 🚀 开源pt，sft脚本，用户可根据需要进一步训练或微调模型
 - 🚀 后续会继续针对llama3-8B-chat版本进行中文指令微调
 
